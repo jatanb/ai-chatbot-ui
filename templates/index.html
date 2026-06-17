@@ -1,146 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Scout AI</title>
 
-<title>Scheme Scout</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Inter,sans-serif;
-}
-
-body{
-    background:#0d0d0d;
-    color:white;
-}
-
-nav{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:25px 8%;
-    border-bottom:1px solid #222;
-}
-
-.logo{
-    font-size:24px;
-    font-weight:700;
-}
-
-nav ul{
-    display:flex;
-    gap:30px;
-    list-style:none;
-}
-
-nav a{
-    color:#aaa;
-    text-decoration:none;
-}
-
-.hero{
-    text-align:center;
-    padding:120px 10%;
-}
-
-.hero h1{
-    font-size:60px;
-    margin-bottom:20px;
-}
-
-.hero p{
-    max-width:700px;
-    margin:auto;
-    color:#999;
-    font-size:18px;
-    line-height:1.8;
-}
-
-.btn{
-    margin-top:35px;
-    display:inline-block;
-    padding:14px 28px;
-    background:white;
-    color:black;
-    text-decoration:none;
-    border-radius:10px;
-    font-weight:600;
-}
-
-.section{
-    padding:100px 8%;
-}
-
-.section-title{
-    text-align:center;
-    font-size:40px;
-    margin-bottom:60px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:#161616;
-    border:1px solid #222;
-    border-radius:15px;
-    padding:25px;
-}
-
-.card h3{
-    margin-bottom:15px;
-}
-
-.card p{
-    color:#888;
-    line-height:1.7;
-}
-
-.steps{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.step{
-    background:#161616;
-    border:1px solid #222;
-    border-radius:15px;
-    padding:25px;
-    width:220px;
-    text-align:center;
-}
-
-.step-number{
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:white;
-    color:black;
-    margin:auto;
-    margin-bottom:15px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-weight:bold;
-}
-
-.footer{
-    text-align:center;
-    padding:60px;
-    border-top:1px solid #222;
-    color:#666;
-}
-</style>
+    <script defer
+            src="{{ url_for('static', filename='js/script.js') }}">
+    </script>
 </head>
 
 <body>
@@ -148,115 +16,169 @@ nav a{
 <nav>
     <div class="logo">Scheme Scout</div>
 
-    <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#works">How It Works</a></li>
-    </ul>
+    <div class="links">
+        <a href="#features">Features</a>
+        <a href="#working">How It Works</a>
+        <a href="#tech">Tech Stack</a>
+    </div>
+
+    <a class="demo-btn"
+       href="https://ai-agent-chatbot-hg5r.onrender.com/"
+       target="_blank">
+       Start now
+    </a>
 </nav>
 
 <section class="hero">
 
-    <h1>Find Jobs & Internships With AI</h1>
+    <h1>
+        AI Powered Job &
+        Internship Finder
+    </h1>
 
     <p>
-        Upload your resume and let AI discover the most relevant jobs,
-        internships and opportunities tailored to your profile.
+        Upload your resume and instantly
+        discover internships, jobs and
+        opportunities matched to your profile.
     </p>
 
-    <a href="https://ai-agent-chatbot-hg5r.onrender.com/" class="btn">Try Demo</a>
+    <a href="https://ai-agent-chatbot-hg5r.onrender.com/"
+       target="_blank"
+       class="hero-btn">
+       Start
+    </a>
 
 </section>
 
-<section class="section" id="features">
+<section id="features" class="features">
 
-    <h2 class="section-title">Features</h2>
+    <h2>Features</h2>
 
     <div class="grid">
 
         <div class="card">
-            <h3>📄 Resume Analysis</h3>
-            <p>
-                AI extracts skills, education and experience directly from your resume.
-            </p>
+            <h3>Resume Analysis</h3>
+            <p>Extract skills, education and experience automatically.</p>
         </div>
 
         <div class="card">
-            <h3>🔍 Smart Search</h3>
-            <p>
-                Searches opportunities across multiple platforms automatically.
-            </p>
+            <h3>AI Matching</h3>
+            <p>Find opportunities tailored to your profile.</p>
         </div>
 
         <div class="card">
-            <h3>🎯 Relevance Scoring</h3>
-            <p>
-                Ranks opportunities based on your profile and career goals.
-            </p>
+            <h3>ATS Insights</h3>
+            <p>Identify strengths and gaps in your resume.</p>
         </div>
 
         <div class="card">
-            <h3>🤖 Agentic AI</h3>
-            <p>
-                AI agents research, filter and summarize opportunities for you.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>⚡ Fast Results</h3>
-            <p>
-                Discover internships and jobs in seconds instead of hours.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>💬 Conversational Search</h3>
-            <p>
-                Ask naturally like "Find ML internships for ECE students".
-            </p>
+            <h3>Real Time Search</h3>
+            <p>Search jobs and internships using AI agents.</p>
         </div>
 
     </div>
 
 </section>
 
-<section class="section" id="works">
+<section id="working" class="working">
 
-    <h2 class="section-title">How It Works</h2>
+    <h2>How It Works</h2>
 
     <div class="steps">
 
         <div class="step">
-            <div class="step-number">1</div>
-            <h3>Upload Resume</h3>
+            <span>1</span>
+            Upload Resume
         </div>
 
         <div class="step">
-            <div class="step-number">2</div>
-            <h3>AI Extracts Skills</h3>
+            <span>2</span>
+            AI Extracts Skills
         </div>
 
         <div class="step">
-            <div class="step-number">3</div>
-            <h3>Agent Searches</h3>
+            <span>3</span>
+            Search Opportunities
         </div>
 
         <div class="step">
-            <div class="step-number">4</div>
-            <h3>Ranks Results</h3>
-        </div>
-
-        <div class="step">
-            <div class="step-number">5</div>
-            <h3>Apply Faster</h3>
+            <span>4</span>
+            Get Best Matches
         </div>
 
     </div>
 
 </section>
 
-<div class="footer">
-    Powered by Gemini • LangGraph • Tavily • Flask
-</div>
+<section class="showcase">
+
+    <h2>Application Showcase</h2>
+    <p class="showcase-sub">
+        See how Scheme Scout analyzes resumes, searches opportunities,
+        and helps users discover the best jobs and internships.
+    </p>
+
+    <div class="showcase-grid">
+
+        <div class="showcase-card">
+            <img src="{{ url_for('static', filename='images/login_page.png') }}"
+                 alt="Login Page">
+            <div class="card-content">
+                <h3>Authentication System</h3>
+                <p>
+                Secure login and registration system for users.
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="showcase-card">
+            <img src="{{ url_for('static', filename='images/resume.png') }}"
+                 alt="Resume Analyzer">
+            <div class="card-content">
+                <h3>Resume Analyzer</h3>
+               <p>
+                AI extracts skills, education and experience automatically.
+               </p>
+            </div>
+        </div>
+
+        <div class="showcase-card">
+            <img src="{{ url_for('static', filename='images/chat_page.png') }}"
+                 alt="Results">
+            <div class="card-content">
+                <h3>Opportunity Matching</h3>
+                <p>
+                Intelligent ranking of internships and jobs based on profile relevance.
+               </p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<section id="tech" class="tech">
+
+    <h2>Built With</h2>
+
+    <div class="tech-list">
+        Flask • Python • LangGraph • Langsmith • Tavily • Docker • Groq 
+    </div>
+
+</section>
+
+<footer>
+
+    <h3>Ready to Find Your Next Opportunity?</h3>
+
+    <a href="https://ai-agent-chatbot-hg5r.onrender.com/"
+       target="_blank"
+       class="footer-btn">
+       Open Application
+    </a>
+
+</footer>
 
 </body>
 </html>

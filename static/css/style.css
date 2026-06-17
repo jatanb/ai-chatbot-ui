@@ -1,0 +1,358 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,sans-serif;
+}
+
+body{
+    background:#0d1117;
+    color:white;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+    border-bottom:1px solid #222;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+}
+
+.links{
+    display:flex;
+    gap:25px;
+}
+
+.links a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+.demo-btn{
+    text-decoration:none;
+    background:white;
+    color:black;
+    padding:10px 20px;
+    border-radius:10px;
+}
+
+.hero{
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h1{
+    font-size:60px;
+    max-width:900px;
+    margin:auto;
+}
+
+.hero p{
+    color:#999;
+    margin-top:20px;
+    font-size:20px;
+}
+
+.hero-btn{
+    display:inline-block;
+    margin-top:30px;
+    background:white;
+    color:black;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:12px;
+}
+
+.features{
+    padding:100px 10%;
+}
+
+.features h2,
+.working h2,
+.tech h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#161b22;
+    padding:25px;
+    border-radius:15px;
+    border:1px solid #222;
+}
+
+.card p{
+    color:#999;
+    margin-top:10px;
+}
+
+.working{
+    padding:100px 10%;
+}
+
+.steps{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.step{
+    background:#161b22;
+    padding:20px;
+    border-radius:15px;
+    width:220px;
+    text-align:center;
+}
+
+.step span{
+    display:block;
+    font-size:30px;
+    margin-bottom:10px;
+}
+
+.tech{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.tech-list{
+    color:#999;
+    font-size:20px;
+}
+
+footer{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.footer-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:white;
+    color:black;
+    padding:15px 30px;
+    border-radius:12px;
+    text-decoration:none;
+}
+
+/* ========================= */
+/* SHOWCASE */
+/* ========================= */
+
+.showcase{
+    padding:100px 10%;
+}
+
+.showcase h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.showcase-sub{
+    text-align:center;
+    color:#999;
+    max-width:700px;
+    margin:0 auto 50px;
+}
+
+.showcase-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.showcase-card{
+    background:#161b22;
+    border:1px solid #222;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.showcase-card:hover{
+    transform:translateY(-5px);
+}
+
+.showcase-card img{
+    width:100%;
+    display:block;
+}
+
+.showcase-card h3{
+    padding:20px 20px 10px;
+}
+
+.showcase-card p{
+    padding:0 20px 20px;
+    color:#999;
+}
+
+
+/* ========================= */
+/* WORKFLOW */
+/* ========================= */
+
+.workflow{
+    padding:100px 10%;
+    text-align:center;
+}
+
+.workflow h2{
+    margin-bottom:10px;
+}
+
+.workflow-container{
+    max-width:600px;
+    margin:auto;
+}
+
+.flow-box{
+    background:#161b22;
+    border:1px solid #222;
+    padding:20px;
+    border-radius:15px;
+    font-weight:600;
+}
+
+.arrow{
+    font-size:28px;
+    margin:12px 0;
+    color:#888;
+}
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 768px){
+
+    nav{
+        padding:20px 5%;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .links{
+        gap:15px;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero{
+        padding:80px 20px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .features,
+    .working,
+    .tech{
+        padding:70px 5%;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .step{
+        width:100%;
+        max-width:350px;
+    }
+
+    .tech-list{
+        font-size:16px;
+        line-height:1.8;
+    }
+
+    .screenshot{
+        width:100%;
+        height:auto;
+    }
+
+    .workflow-image{
+        width:100%;
+        height:auto;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 480px){
+
+    .logo{
+        font-size:20px;
+    }
+
+    .links{
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .demo-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero{
+        padding:60px 15px;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-btn{
+        width:100%;
+        max-width:250px;
+    }
+
+    .card{
+        padding:20px;
+    }
+
+    .card h3{
+        font-size:18px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    .step{
+        width:100%;
+    }
+
+    footer{
+        padding:70px 20px;
+    }
+
+    .footer-btn{
+        width:100%;
+        max-width:250px;
+    }
+}
